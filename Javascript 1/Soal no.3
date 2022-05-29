@@ -1,0 +1,20 @@
+// Soal 3
+function printSegitiga (num) {
+    let hasil = []
+        if (num == null) {
+            console.log('input kosong!')
+        } else if (num >= 0) {
+            for ( let i = num; i > 0; i--) {
+                for(let j = 1; j <= i; j++) {
+                hasil = hasil + j + ' ' 
+                } hasil += '\n'; 
+            }
+            return console.log(hasil.slice(0, -1));
+        } else {
+            console.log('Data harus number')
+        }
+    } 
+    
+printSegitiga(5)
+printSegitiga()
+printSegitiga('enam')
