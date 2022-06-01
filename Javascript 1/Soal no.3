@@ -7,7 +7,7 @@ function printSegitiga (num) {
         } else if (num >= 0) {
             for ( let i = num; i > 0; i--) {
                 for(let j = 1; j <= i; j++) {
-                hasil = hasil + j + ' ' 
+                hasil = `${hasil + j}` 
                 } hasil += '\n'; 
             }
             return console.log(hasil.slice(0, -1));
