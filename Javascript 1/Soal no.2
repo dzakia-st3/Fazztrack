@@ -5,8 +5,8 @@ const bahasaIndonesia = 90
 const bahasaInggris = 89
 const ipa = 69
 
-let nilaiSiswa = [...[mtk], ...[bahasaIndonesia], ...[bahasaInggris], ...[ipa]];
-let cekData = (nilaiSiswa.length) ? nilaiSiswa.every(n => n !== null  && typeof(n) == 'number' ) : false;
+let nilaiSiswa = [mtk, bahasaIndonesia, bahasaInggris, ipa];
+let cekData = (nilaiSiswa.length) ? nilaiSiswa.every(n => n !== null  && typeof(n) == 'number' && n >= 0 && n <= 100 ) : false;
 
 let jumlahNilai = 0
 
@@ -15,12 +15,12 @@ let jumlahNilai = 0
         jumlahNilai = jumlahNilai + nilaiSiswa[i];
         var rataRata = Math.ceil((jumlahNilai/nilaiSiswa.length));
         
-        } console.log('Rata-rata: ' + rataRata);
+        } console.log(`Rata-rata: ${rataRata}`);
     } else {
         console.log('Data ada yang kosong!')
     }    
     
-    if (rataRata >= 90) {
+    if (rataRata >= 90 && rataRata <= 100) {
     console.log ('Grade: A')
     } else if (rataRata >= 80 && rataRata <= 89) {
         console.log ('Grade: B')
