@@ -1,0 +1,84 @@
+SOAL 1
+
+/* Method pada Javascript
+1. filter(kondisi)
+    Metode ini berfungsi untuk membuat sebuah array baru dengan memperhatikan kondisi tertentu pada setiap elemen dari array yang sudah ada.
+   contoh :
+*/
+    const dataArray = [2, 25, 4, 14, 17, 30, 8]
+    const filteredArray = dataArray.filter(n => n % 2 === 0)
+    console.log(filteredArray)
+
+/* 2. sort()
+     Metode ini berfungsi untuk mengurutkan elemen pada array baik secara ascending atau descending
+    contoh :
+*/
+    const dataArray1 = [2, 25, 4, 14, 17, 30, 8]
+    const sortArray = (dataArray1.sort((i,j) => {return j-i}))
+    console.log(sortArray)
+
+/* 3. concat()
+     Metode ini berfungsi  untuk menggabungkan 2 array menjadi 1 array.
+    contoh :
+*/
+    const huruf = ['a', 'b', 'c']
+    const angka = [1, 2, 3]
+
+    const arrayBaru = huruf.concat(angka);
+    console.log(arrayBaru)
+
+/* 4. every(kondisi)
+     Metode ini berfungsi untuk mengecek apakah setiap elemen dalam array memenuhi kondisi atau tidak.
+    contoh :
+*/
+    const dataArray2 = [2, 25, 4, 14, 17, 30, 8]
+    const cekData = dataArray2.every(n => n > 5)
+    console.log(cekData)
+
+/* 5. map(kondisi)
+     Metode ini berfungsi untuk membuat array baru sambil mengecek/melakukan operasi terhadap setiap elemen array.
+    contoh :
+*/
+    const angka2 = [1, 2, 3, 4, 5]  
+    const kali2 = angka2.map(n => n * 2);
+    console.log(kali2)
+
+/* 6. indexOf()
+     Metode ini berfungsi untuk mencari karakter atau gabungan karakter di dalam string, lalu mengembalikan nilai indeks dari karakter atau gabungan karakter tersebut.
+    contoh :
+*/
+    const kalimat = 'Saya belajar Javscript'
+    const hasil = kalimat.indexOf('y')
+    console.log(hasil)
+
+/* 7. toUpperCase()
+     Metode ini berfungsi untuk merubah semua huruf menjadi huruf besar (toUpperCase)
+    contoh :
+*/
+    const kalimat2 = 'saya belajar javscript'
+    const hasil2 = kalimat2.toUpperCase()
+    console.log(hasil2)
+
+/* 8. toLowerCase()
+     Metode ini berfungsi untuk merubah semua huruf menjadi huruf kecil (toLowerCase)
+    contoh :
+*/
+    const kalimat3 = 'SAYA BELAJAR JAVASCRIPT'
+    const hasil3 = kalimat3.toLowerCase()
+    console.log(hasil3)
+
+/* 9. replace(a,b)
+     Metode ini berfungsi untuk mengganti karakter atau kata di dalam sebuah string dengan karakter atau kata yang sudah kita tentukan. (ket : a = kata yang akan diganti, b = kata baru )
+    contoh :
+*/
+    const kalimat4 = 'Saya Belajar Javascript'
+    const hasil4 = kalimat4.replace('Belajar', 'Latihan')
+    console.log(hasil4)
+
+/* 10. slice(a,b)
+     Metode ini berfungsi untuk mengambil string dengan rentang indeks awal dan akhir. (ket : a = indeks awal, b = indeks akhir)     
+    contoh :
+*/
+    const kalimat5 = 'Saya Belajar Javascript'
+    const hasil5 = kalimat5.slice(0,5)
+    console.log(hasil5)
