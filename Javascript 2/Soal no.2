@@ -1,0 +1,29 @@
+SOAL 2
+
+const nama = ['Abigail', 'Alexandra', 'Alison', 'Amanda', 'Angela', 'Bella', 'Carol', 'Caroline', 'Carolyn', 'Deirdre', 'Diana', 'Elizabeth', 'Ella', 'Faith', 'Olivia', 'Penelope']
+
+const searchName = (kataSaring, jumlahOutput, callback) => {
+    
+    let editNama = nama.map(word => {
+        return word[0].toLowerCase() + word.slice(1);
+        }) 
+      
+    let hasil = []
+   
+    for(let i = 0; i < editNama.length; i++) { 
+          if(editNama[i].indexOf(kataSaring) != -1)
+          {
+            hasil.push(nama[i])
+          } 
+      }
+        return callback(hasil, jumlahOutput)
+}
+
+const cariNama = (hasil, jumlahOutput) => {
+    let hasilAkhir = hasil.slice(0, jumlahOutput)
+    return hasilAkhir
+  }
+
+console.log(searchName('an', 3, cariNama))
+console.log(searchName('an', 4, cariNama))
+console.log(searchName('ro', 2, cariNama))
