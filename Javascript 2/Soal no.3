@@ -1,0 +1,24 @@
+SOAL 3
+
+const cekNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
+  
+  let hasil = ''
+  
+  if (nilaiAwal > nilaiAkhir) {
+        hasil += 'Nilai akhir harus lebih besar dari nilai awal'
+    } else if ( dataArray.length <= 5) {
+      hasil += 'Jumlah angka dalam dataArray harus lebih dari 5'
+    } else { 
+      if (dataArray.filter(i => i > nilaiAwal && i < nilaiAkhir).length !== 0) {
+        hasil = ((dataArray.filter(i => i > nilaiAwal && i < nilaiAkhir)).sort((i,j) => {return i-j}))
+      } else {
+      hasil += 'Nilai tidak ditemukan'   
+      } 
+    }
+    return hasil
+}
+
+console.log(cekNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]))
+console.log(cekNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]))
+console.log(cekNilai(4, 17, [2, 25, 4]))
+console.log(cekNilai(5, 17, [2, 25, 4, 1, 30, 18]))
