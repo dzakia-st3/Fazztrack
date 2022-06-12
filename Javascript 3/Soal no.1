@@ -1,0 +1,44 @@
+const cekHariKerja = (day) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dataDay = ['senin', 'selasa', 'rabu', 'kamis', 'jumat']
+            let cek = dataDay.find((item) => {
+                return item === day
+            })
+            if (cek) {
+                resolve (cek)
+            } else {
+                reject(new Error('Hari ini bukan hari kerja'))
+            }
+    
+        }, 3000)
+    })
+}
+
+cekHariKerja('minggu').then((day) => {
+    console.log (`${day} adalah hari kerja`)
+}).catch((error) => {
+    console.log(error)
+}).finally(()=> {
+    console.log('Proses telah selesai')
+})
+
+
+const cekHari = async (hari) => {
+    const day = ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu']
+    
+    if (hari !== day.find((item) => item == hari) ) {
+        console.log('masukkan hari!')
+    } else {
+        try {
+            const result = await cekHariKerja(hari)
+                console.log (`${result} adalah hari kerja`)
+            } catch (error) {
+                console.log (error)
+            } finally {
+                console.log('Proses telah selesai')
+            }
+    }
+    }
+
+cekHari('rabu')
