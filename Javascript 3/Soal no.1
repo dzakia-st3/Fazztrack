@@ -25,13 +25,14 @@ cekHariKerja('minggu').then((day) => {
 
 
 const cekHari = async (hari) => {
+    const hariCek = hari.toLowerCase()
     const day = ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu']
     
-    if (hari !== day.find((item) => item == hari) ) {
+    if (hariCek !== day.find((item) => item == hariCek) ) {
         console.log('masukkan hari!')
     } else {
         try {
-            const result = await cekHariKerja(hari)
+            const result = await cekHariKerja(hariCek)
                 console.log (`${result} adalah hari kerja`)
             } catch (error) {
                 console.log (error)
